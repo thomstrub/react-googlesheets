@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    <CsvForm />
+    <CsvForm state={state} changeHandeler={changeHandeler} submitHandler={submitHandler}/>
   );
 }
 

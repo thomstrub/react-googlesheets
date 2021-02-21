@@ -2,7 +2,8 @@ import React from 'react';
 import {Button, Form, Container, Header} from 'semantic-ui-react';
 import './CsvForm.css';
 
-export default function CsvForm(){
+export default function CsvForm({state, changeHandler, submitHandler}){
+
     return(
         <Container fluid className="container">
         <Header as='h2'>React Google Sheets!</Header>
