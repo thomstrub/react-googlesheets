@@ -17,10 +17,15 @@ function App() {
       [e.target.name] : e.target.value
     });
   }
-
+  // https://sheet.best/api/sheets/89f20199-b0c0-4f7c-a906-78597ed9678e
   function submitHandler(e){
     e.preventDefault();
     console.log(state)
+
+    axios.post('https://sheet.best/api/sheets/89f20199-b0c0-4f7c-a906-78597ed9678e', this.state)
+    .then(response => {
+      console.log(response);
+    })
   }
 
   return (
