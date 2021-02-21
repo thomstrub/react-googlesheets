@@ -11,7 +11,7 @@ function App() {
     hobby: ""
   });
 
-  function changeHandeler(e){
+  function changeHandler(e){
     setState({
       ...state,
       [e.target.name] : e.target.value
@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    <CsvForm state={state} changeHandeler={changeHandeler} submitHandler={submitHandler}/>
+    <CsvForm state={state} changeHandler={changeHandler} submitHandler={submitHandler}/>
   );
 }
 
