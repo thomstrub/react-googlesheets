@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import CsvForm from './components/CsvForm/CsvForm'
+import axios from 'axios'
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
     e.preventDefault();
     console.log(state)
 
-    axios.post('https://sheet.best/api/sheets/89f20199-b0c0-4f7c-a906-78597ed9678e', this.state)
+    axios.post('https://sheet.best/api/sheets/89f20199-b0c0-4f7c-a906-78597ed9678e', state)
     .then(response => {
       console.log(response);
     })
