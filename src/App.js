@@ -12,6 +12,8 @@ function App() {
     hobby: ""
   });
 
+  const [sheetData, setSheetData] = useState([]);
+
   function changeHandler(e){
     setState({
       ...state,
@@ -39,7 +41,10 @@ function App() {
       
       )
     .then((response) => {
-      console.log(response.data, "< ---- = get request");
+      console.log(response.data[0], "< ---- = get request");
+      setSheetData(...response.data)
+      console.log(sheetData);
+
     });
   }, [])
 
